@@ -1,12 +1,12 @@
 //inizializzo un array bidimensionale 
 const bikes = [
     {
-        nome: 'Trek Emonda SLR 9',
-        peso: 6.8,
-    },
-    {
         nome: 'Specialized S-Works Tarmac SL7',
         peso: 7.2,
+    },
+    {
+        nome: 'Trek Emonda SLR 9',
+        peso: 6.8,
     },
     {
         nome: 'Canyon Ultimate CF SLX',
@@ -21,16 +21,11 @@ const bikes = [
         peso: 7.3,
     },
 ]
-let peso_minore = 100;
-for (let i = 0; i < bikes.length; i++){
-    for(let key in bikes[i]){
-        if (key ==='peso'){
-            if(bikes[i][key] < peso_minore){
-                peso_minore = bikes[i][key];
-            }
-           
-        }
-    }
+let bici_leggera = bikes[0];
+for (let i = 1; i < bikes.length; i++){
+ if (bikes[i].peso < bici_leggera.peso){
+    bici_leggera = bikes[i];
+ }
 }
 
-document.body.innerHTML = `<h1>La bici più leggera pesa ${peso_minore} kg.`
+document.body.innerHTML = `<h1>La bici più leggera è ${bici_leggera.nome} e pesa ${bici_leggera.peso} kg.</h1>`
