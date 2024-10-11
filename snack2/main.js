@@ -34,13 +34,10 @@ function getRandomInt() {
 const falli = [];
 console.log(squadre);
 for(let i = 0; i < squadre.length; i++){
-    let squadra_falli = {};
-    for(let key in squadre[i]){
-        if ((key === 'nome') || (key === 'falli')){
-            squadra_falli[key] = squadre[i][key];
-        }
-    }
-    falli.push(squadra_falli);
+   falli.push({
+    nome : squadre[i].nome,
+    falli: squadre[i].falli
+   })
 }
 console.log(falli);
 
