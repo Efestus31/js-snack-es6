@@ -21,4 +21,16 @@ const bikes = [
         peso: 7.3,
     },
 ]
+let peso_minore = 100;
+for (let i = 0; i < bikes.length; i++){
+    for(let key in bikes[i]){
+        if (key ==='peso'){
+            if(bikes[i][key] < peso_minore){
+                peso_minore = bikes[i][key];
+            }
+           
+        }
+    }
+}
 
+document.body.innerHTML = `<h1>La bici più leggera pesa ${peso_minore} kg.`
