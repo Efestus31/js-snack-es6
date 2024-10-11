@@ -2,27 +2,34 @@
 const squadre = [
     {
         nome: 'Juventus',
-        punti: 0,
-        falli: 0,
+        punti: getRandomInt(1,9),
+        falli: getRandomInt(1,9),
     },
     {
         nome: 'Inter',
-        punti: 0,
-        falli: 0,
+        punti: getRandomInt(1,9),
+        falli: getRandomInt(1,9),
     },
     {
         nome: 'AC Milan',
-        punti: 0,
-        falli: 0,
+        punti: getRandomInt(1,9),
+        falli: getRandomInt(1,9),
     },
     {
         nome: 'Napoli',
-        punti: 0,
-        falli: 0,
+        punti: getRandomInt(1,9),
+        falli: getRandomInt(1,9),
     },
     {
         nome: 'Roma',
-        punti: 0,
-        falli: 0,
+        punti: getRandomInt(1,9),
+        falli: getRandomInt(1,9),
     },
 ];
+//funzione numeri casuali
+function getRandomInt() {
+    return Math.floor((Math.random() * 10) + 1);
+}
+
+console.log(squadre);
+
