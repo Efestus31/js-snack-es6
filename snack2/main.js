@@ -31,5 +31,21 @@ function getRandomInt() {
     return Math.floor((Math.random() * 10) + 1);
 }
 
+const falli = [];
 console.log(squadre);
+for(let i = 0; i < squadre.length; i++){
+    let squadra_falli = {};
+    for(let key in squadre[i]){
+        if ((key === 'nome') || (key === 'falli')){
+            squadra_falli[key] = squadre[i][key];
+        }
+    }
+    falli.push(squadra_falli);
+}
+console.log(falli);
 
+// //Creare un array di oggetti di squadre di calcio.
+// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
